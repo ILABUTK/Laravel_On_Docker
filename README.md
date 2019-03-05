@@ -12,6 +12,7 @@ Download  docker-compose.yml, web.dockerfile, app.dockerfile & edit if needed (l
 * docker run --rm --interactive --tty --volume $PWD:/app composer install
 * cp env.example .env
 * docker-compose up
+* docker-compose exec app php artisan migrate
 * docker-compose exec app php artisan key:generate
 * docker-compose exec app php artisan optimize
 ``` 
