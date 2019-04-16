@@ -80,10 +80,10 @@ Based on:
 > git clone LARAVEL_GIT_URL
 > rm -rf .git
 > docker run --rm -v $(pwd):/app composer/composer install
-$ prepare docker-compose.yml, web.dockerfile, app.dockerfile
+$ prepare docker-compose.yml, web.dockerfile, app.dockerfile vhost.conf
 > cp .env.example .env
 > docker-compose up
 > docker-compose exec app php artisan key:generate
 > docker-compose exec app php artisan optimize
-$ open localhost:8000. Enjoy developing!
+$ open localhost:9090. Enjoy developing!
 
