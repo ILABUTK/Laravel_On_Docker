@@ -18,3 +18,23 @@ Download  docker-compose.yml, web.dockerfile, app.dockerfile & edit if needed (l
 ``` 
 open localhost:8000. Enjoy developing! 
 ```
+
+
+## Further notes (Xueping Li)
+Based on:
+- https://medium.com/@shakyShane/laravel-docker-part-1-setup-for-development-e3daaefaf3c
+
+### Step by step:
+
+> cd
+> mkdir xp1site ### your site name
+> cd xp1site
+> git clone LARAVEL_GIT_URL  // https://github.com/laravel/laravel.git
+> rm -rf .git
+> docker run --rm -v $(pwd):/app composer/composer install
+$ prepare docker-compose.yml, web.dockerfile, app.dockerfile vhost.conf
+> cp .env.example .env
+> docker-compose up
+> docker-compose exec app php artisan key:generate
+> docker-compose exec app php artisan optimize
+$ open localhost:9090. Enjoy developing!
